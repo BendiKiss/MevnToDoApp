@@ -1,17 +1,14 @@
 <template>
-  <div class="todos">
-    <h1>This is the ToDos page</h1>
-  </div>
-  <div v-for="item in state.todos" :key="item.author" >
-    <h2>
+  <div v-for="item in state.todos" :key="item.id" >
+    <p>
+      {{ item._id }}
+    </p>
+    <h3>
       {{ item.author }}
-    </h2>
+    </h3>
     <h4>
       {{ item.todo }}
     </h4>
-    <p>
-      {{ item.id }}
-    </p>
   </div>
 </template>
 
